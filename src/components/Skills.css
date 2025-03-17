@@ -1,0 +1,85 @@
+/* ===== Skills Section Styling ===== */
+.skills-container {
+    width: 100%;
+    height: 100%;
+    background-color: #0a192f76;
+    color: #d1d5db; /* Equivalent to text-gray-300 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* ===== Content Wrapper ===== */
+  .skills-wrapper {
+    max-width: 1000px;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  /* ===== Header Styling ===== */
+  .skills-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.75rem;
+  }
+  
+  .skills-header h2 {
+    font-size: 2.25rem; /* Equivalent to text-4xl */
+    font-weight: bold;
+    border-bottom: 4px solid #06b6d4; /* Equivalent to border-cyan-500 */
+    text-align: center;
+  }
+  
+  .skills-header p {
+    padding-top: 1rem;
+    font-size: 1.5rem; /* Equivalent to text-2xl */
+    text-align: center;
+  }
+  
+  /* ===== Skills Grid ===== */
+  .skills-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    text-align: center;
+    padding-top: 2rem;
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 640px) {
+    .skills-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  /* ===== Skill Card Styling ===== */
+  .skill-card {
+    box-shadow: 0 4px 6px rgba(4, 12, 22, 0.8); /* Equivalent to shadow-[#040c16] */
+    padding: 1rem;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .skill-card:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Responsive Design: Grid layout for medium screens */
+@media (min-width: 640px) {
+    .skills-grid {
+      grid-template-columns: repeat(4, 1fr); /* 4 columns for medium screens */
+    }
+  }
+  
+  /* Responsive Design: Single column on small screens */
+  @media (max-width: 639px) {
+    .skills-grid {
+      grid-template-columns: 1fr; /* Stack cards in a single column */
+    }
+  }

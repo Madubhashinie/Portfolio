@@ -1,0 +1,79 @@
+/* ====== Dark Theme Contact Section ====== */
+#contact {
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 30px;
+  background: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 1; /* Ensures content is above the border */
+}
+
+/* ====== Animated Rainbow Border (Outside) ====== */
+#contact::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 16px; /* Matches #contact's border-radius */
+  padding: 4px;
+  background: linear-gradient(90deg, 
+      #ff0000, #ff7f00, #ffff00, 
+      #00ff00, #0000ff, #4b0082, #9400d3, #ff0000
+  );
+  background-size: 300% 300%;
+  animation: moveBorder 4s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: exclude; 
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+/* ====== Rainbow Border Animation ====== */
+@keyframes moveBorder {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* ====== Header Styling ====== */
+#contact h2 {
+  font-size: 26px;
+  color: #f1f1f1;
+  margin-bottom: 20px;
+}
+
+/* ====== Contact Details Styling ====== */
+#contact p {
+  font-size: 18px;
+  color: #b3b3b3;
+  margin: 10px 0;
+}
+
+/* ====== Contact Links ====== */
+#contact a {
+  color: #1e90ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* ====== Hover Effect ====== */
+#contact a:hover {
+  color: #00aaff;
+  transform: scale(1.05);
+  text-decoration: underline;
+}
+
+/* ====== Responsive Design ====== */
+@media (max-width: 768px) {
+  #contact {
+      width: 90%;
+      padding: 20px;
+  }
+}

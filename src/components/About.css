@@ -1,0 +1,111 @@
+/* ====== About Section ====== */
+#about {
+    display: flex;
+    
+    justify-content: space-between;
+    max-width: 100%;
+    margin: 100px auto 80px;
+    padding:20px;
+    background:#8697c4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ====== Description ====== */
+  #about h2 {
+    
+    align-items: center;
+    font-size: 50px;
+    color: #3D52A0;
+    margin-bottom: 10px;
+
+  }
+  @keyframes slideInUp {
+    from {
+      transform: translate3d(0, 100%, 0);
+      visibility: visible;
+    }
+  
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  } 
+
+  #about p {
+    
+    font-size: 1.5rem; 
+    color:#0d111b;
+    line-height: 1.6;
+    max-width: 60%;
+    text-align:justify;
+    margin-left: 50px;
+    animation: slideInUp 0.5s ease-out;
+  }
+
+  #about button{
+    color:light-grey;
+    padding:large;
+    margin:top;
+  }
+  
+  /* ====== Image Styling ====== */
+  #about img {
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* ====== Hover Effect ====== */
+  #about img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* ====== Responsive Design ====== */
+  @media (max-width: 768px) {
+    #about {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    #about p {
+      max-width: 100%;
+    }
+  
+    #about img {
+      margin-top: 15px;
+    }
+  }
+
+
+ 
+  /* Button Container */
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* Space between icon and text */
+  background-color: #06b6d4; /* Cyan-500 */
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+/* Hover Effect */
+.download-btn:hover {
+  background-color: #0891b2; /* Darker cyan */
+  transform: scale(1.05);
+}
+
+/* Icon Styling */
+.download-btn svg {
+  font-size: 1.2rem; /* Adjust icon size */
+}
+
+

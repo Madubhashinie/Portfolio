@@ -1,0 +1,116 @@
+/* ====== Header Styles ====== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #adbbda86;
+    position: fixed;
+    width: 80%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ====== Logo / Name ====== */
+  header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3D52A0;
+  }
+  
+  /* ====== Navbar ====== */
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+  }
+  
+  nav ul li {
+    display: inline-block;
+  }
+  
+  /* ====== Nav Links ====== */
+  nav ul li a {
+    text-decoration: none;
+    color: #3D52A0;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  /* ====== Hover Effect ====== */
+  nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #7091E6;
+    left: 0;
+    bottom: -2px;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  nav ul li a:hover {
+    color: #7091E6;
+  }
+  
+  nav ul li a:hover::after {
+    width: 100%;
+  }
+  
+  /* ====== Responsive Navbar ====== */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+    }
+  }
+  
+  /* ====== Responsive Navbar for Mobile View ====== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 22px; /* Adjusting header size on smaller screens */
+  }
+
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    margin-top: 10px; /* Added space between the logo and the navbar */
+  }
+  /* Hamburger menu button for smaller screens */
+  .hamburger {
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+    color: #3D52A0;
+  }
+
+  /* Initially hide the nav items on mobile view */
+  nav ul {
+    display: none;
+    width: 100%;
+  }
+
+  /* Show nav items when the hamburger menu is clicked */
+  nav ul.show {
+    display: flex;
+  }
+}

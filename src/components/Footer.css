@@ -1,0 +1,50 @@
+/* Footer Styling */
+footer {
+  background-color: #0a192f;  /* Dark background */
+  color: #d1d5db; /* Light text color */
+  text-align: center;
+  padding: 20px 10%;  /* Padding for top and bottom */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 1rem;  /* Adjust the font size */
+  box-sizing: border-box;
+}
+
+/* Footer Text Styling */
+footer p {
+  margin: 0;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+}
+
+/* Links in Footer */
+footer p a {
+  color: #06b6d4;  /* Link color */
+  text-decoration: none;
+}
+
+footer p a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  footer {
+    padding: 20px 5%; /* Reduce padding on smaller screens */
+  }
+
+  footer p {
+    font-size: 0.9rem; /* Slightly smaller text on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 20px 3%; /* Reduce padding on very small screens */
+  }
+
+  footer p {
+    font-size: 0.8rem; /* Further reduce font size on very small screens */
+  }
+}
